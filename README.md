@@ -1,2 +1,39 @@
-# orderbook-telegram-bot
-Telegram bot and web dashboard for crypto order book visualization
+# 📊 Crypto OrderBook Tools
+
+<div align="center">
+
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![Telegram](https://img.shields.io/badge/Telegram-Bot-blue)
+![Binance](https://img.shields.io/badge/Binance-API-yellow)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+**Telegram бот и веб-дашборд для анализа стакана ордеров криптовалют с Binance**
+
+</div>
+
+## 📋 Содержание
+- [О проекте](#о-проекте)
+- [Telegram Бот](#telegram-бот)
+- [Веб Дашборд](#веб-дашборд)
+- [Установка](#установка)
+- [Структура проекта](#структура-проекта)
+
+## 🎯 О проекте
+
+Два инструмента для анализа стакана ордеров в стиле CoinGlass:
+
+1. **🤖 Telegram Bot** - бот для мгновенного получения стакана ордеров
+2. **🌐 Web Dashboard** - веб-интерфейс с обновлением в реальном времени
+
+## 🤖 Telegram Бот
+
+### Быстрый старт:
+```bash
+cd telegram-bot
+pip install -r requirements.txt
+python bot.py
+
+## Использование:
+Команда: /orderbook btcusdt
+
+Или просто отправь: ethusdt
