@@ -33,7 +33,39 @@ cd telegram-bot
 pip install -r requirements.txt
 python bot.py
 
-## Использование:
+Использование:
 Команда: /orderbook btcusdt
 
 Или просто отправь: ethusdt
+
+🌐 Веб Дашборд
+Быстрый старт:
+
+cd web-dashboard
+pip install -r requirements.txt
+python volume.py
+
+🚀 Установка
+
+# Клонировать репозиторий
+git clone https://github.com/ВАШ_USERNAME/crypto-orderbook-tools.git
+cd crypto-orderbook-tools
+
+📁 Структура проекта
+
+crypto-orderbook-tools/
+├── telegram-bot/          # Telegram бот
+│   ├── bot.py            # Основной код бота
+│   ├── requirements.txt  # Зависимости
+│   └── config.example.py # Пример конфигурации
+├── web-dashboard/        # Веб дашборд
+│   ├── volume.py         # Код веб-приложения
+│   └── requirements.txt  # Зависимости
+├── README.md             # Документация
+├── .gitignore           # Игнорируемые файлы
+└── LICENSE              # Лицензия MIT
+
+📄 Лицензия
+MIT License - см. файл LICENSE
+
+⭐ Если проект понравился, поставь звезду! ⭐
