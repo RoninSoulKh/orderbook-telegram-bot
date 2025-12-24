@@ -27,6 +27,12 @@
 
 ## 🤖 Telegram Бот
 
+Скриншоты примеров:
+
+![Image](https://github.com/user-attachments/assets/6b838e81-de1d-470e-b29b-5d9f7205012b)
+![Image](https://github.com/user-attachments/assets/b16ef0d6-e821-4c0e-af51-0fd6e328ac6f)
+![Image](https://github.com/user-attachments/assets/8efea495-fd1a-4cfb-81d0-e01ce01f00b5)
+
 ### Быстрый старт:
 ```bash
 cd telegram-bot
