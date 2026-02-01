@@ -7,71 +7,90 @@
 ![Binance](https://img.shields.io/badge/Binance-API-yellow)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-**Telegram бот и веб-дашборд для анализа стакана ордеров криптовалют с Binance**
+**Telegram бот и веб-дашборд для визуального анализа стакана ордеров криптовалют (Binance)**
 
 </div>
 
-## 📋 Содержание
-- [О проекте](#о-проекте)
-- [Telegram Бот](#telegram-бот)
-- [Веб Дашборд](#веб-дашборд)
-- [Установка](#установка)
-- [Структура проекта](#структура-проекта)
+---
 
-## 🎯 О проекте
+## 📌 О проекте
 
-Два инструмента для анализа стакана ордеров в стиле CoinGlass:
+Набор инструментов для анализа стакана ордеров в стиле CoinGlass.
 
-1. **🤖 Telegram Bot** - бот для мгновенного получения стакана ордеров
-2. **🌐 Web Dashboard** - веб-интерфейс с обновлением в реальном времени
+Проект состоит из двух независимых частей:
 
-## 🤖 Telegram Бот
+1. **🤖 Telegram Bot**  
+   Быстро отправляет визуализацию стакана ордеров прямо в Telegram в виде PNG-изображения.
 
-Скриншоты примеров:
+2. **🌐 Web Dashboard**  
+   Веб-интерфейс на Dash для анализа стакана ордеров в реальном времени (BTC/USDT).
 
+Проект создан как учебный и портфолио-проект с упором на:
+- чистую структуру
+- безопасность (без токенов в репозитории)
+- понятный запуск
+
+---
+
+## 🤖 Telegram Bot
+
+### Возможности
+- Получение стакана ордеров с Binance (spot / futures)
+- Визуализация bid / ask объёмов
+- Отправка графика **в виде PNG прямо в чат**
+- Поддержка команд и текстовых тикеров
+
+### Примеры
 ![Image](https://github.com/user-attachments/assets/6b838e81-de1d-470e-b29b-5d9f7205012b)
 ![Image](https://github.com/user-attachments/assets/b16ef0d6-e821-4c0e-af51-0fd6e328ac6f)
 ![Image](https://github.com/user-attachments/assets/8efea495-fd1a-4cfb-81d0-e01ce01f00b5)
 
-### Быстрый старт:
-```bash
+### Использование
+- Команда:
+/orderbook btcusdt
+
+- Или просто отправь тикер текстом:
+ethusdt
+
+Бот автоматически:
+- запрашивает стакан ордеров с Binance (spot / futures)
+- строит визуализацию bid / ask объёмов
+- отправляет PNG-изображение прямо в чат
+
+---
+
+## ⚙️ Установка и запуск
+
+### 1. Клонировать репозиторий
+git clone https://github.com/RoninSoulKh/orderbook-telegram-bot.git
+cd orderbook-telegram-bot
+
+### 2. Telegram Bot
 cd telegram-bot
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
+
+Создай файл .env на основе примера:
+cp .env.example .env
+
+Укажи токен Telegram-бота:
+BOT_TOKEN=YOUR_TELEGRAM_BOT_TOKEN
+
+Запуск бота:
 python bot.py
 
-Использование:
-Команда: /orderbook btcusdt
+---
 
-Или просто отправь: ethusdt
+## 🌐 Web Dashboard
 
-🌐 Веб Дашборд
-Быстрый старт:
+Веб-дашборд для отображения стакана ордеров BTC/USDT в реальном времени.
 
 cd web-dashboard
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 python volume.py
 
-🚀 Установка
-
-# Клонировать репозиторий
-git clone https://github.com/ВАШ_USERNAME/crypto-orderbook-tools.git
-cd crypto-orderbook-tools
-
-📁 Структура проекта
-
-crypto-orderbook-tools/
-├── telegram-bot/          # Telegram бот
-│   ├── bot.py            # Основной код бота
-│   ├── requirements.txt  # Зависимости
-│   └── config.example.py # Пример конфигурации
-├── web-dashboard/        # Веб дашборд
-│   ├── volume.py         # Код веб-приложения
-│   └── requirements.txt  # Зависимости
-├── README.md             # Документация
-├── .gitignore           # Игнорируемые файлы
-└── LICENSE              # Лицензия MIT
-
-📄 Лицензия
-MIT License - см. файл LICENSE
-
-⭐ Если проект понравился, поставь звезду! ⭐
+После запуска открой в браузере:
+http://127.0.0.1:8050
